@@ -8,18 +8,25 @@ public class Calculator {
         this.sign = sign;
     }
 
-    public double Calculation() {
+    public double calculation() {
         double result = 0d;
 
         switch (sign) {
-            case '+': result = firstValue + secondValue;
-            case '-': result = firstValue - secondValue;
-            case '*': result = firstValue * secondValue;
+            case '+':
+                result = firstValue + secondValue;
+                break;
+            case '-':
+                result = firstValue - secondValue;
+                break;
+            case '*':
+                result = firstValue * secondValue;
+                break;
             case '/':
                 if(firstValue == 0 || secondValue == 0) {
                     return 0;
                 }
                 result = firstValue / secondValue;
+                break;
             default:
                 System.out.println("Invalid sign: " + sign);
         }
